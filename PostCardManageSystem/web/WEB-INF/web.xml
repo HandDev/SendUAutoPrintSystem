@@ -13,11 +13,24 @@
             <param-name>com.sun.jersey.config.property.packages</param-name>
             <param-value>biz.sendu.postcardmanage.servlet.rest</param-value>
         </init-param>
+        <init-param>
+            <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+            <param-value>true</param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>PostCardManage Rest API</servlet-name>
         <url-pattern>/postcard/*</url-pattern>
     </servlet-mapping>
-
+    
+    <servlet>
+        <servlet-name>test</servlet-name>
+        <servlet-class>biz.sendu.postcardmanage.servlet.rest.test</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>test</servlet-name>
+        <url-pattern>/test/</url-pattern>
+    </servlet-mapping>
 </web-app>

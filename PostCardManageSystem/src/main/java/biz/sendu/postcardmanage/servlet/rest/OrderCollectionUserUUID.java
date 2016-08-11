@@ -1,6 +1,7 @@
 package biz.sendu.postcardmanage.servlet.rest;
 
 import biz.sendu.postcardmanage.mongodb.MongoDBManager;
+import biz.sendu.postcardmanage.mongodb.OrderCollectionManager;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -14,9 +15,10 @@ import java.net.UnknownHostException;
  * Created by parkjaesung on 2016. 8. 11..
  */
 
-@Path("/order/uuid/")
-public class OrderManager {
+@Path("/order/useruuid/")
+public class OrderCollectionUserUUID {
 
+    private OrderCollectionManager orderCollectionManager = OrderCollectionManager.getInstance();
 
     @GET
     @Path("{uuid}")
@@ -26,20 +28,6 @@ public class OrderManager {
             DB db= null;
 
         System.out.println("uuid :" + uuid);
-        Order result = null;
-
-        try {
-            db = mongoDBManager.getOrdersDB();
-        } catch (UnknownHostException e) {
-            System.out.println("getOrdersDB execption");
-            e.printStackTrace();
-        }
-
-        DBCollection orderTable = db.getCollection("order");
-        BasicDBObject whereQuery = new BasicDBObject();
-        whereQuery.put("uuid", uuid);
-        DBCursor dbCursor = orderTable.find(whereQuery);
-
-        return dbCursor.next().toString();
+        return orderCollectionManager.searchOrderByUserUUID(uuid);
     }
 }

@@ -9,16 +9,16 @@ import com.mongodb.BasicDBObject;
  */
 
 //Class for changing User & Order object to BasicDocument for Mongo database
-public class OrderToDBObject {
+public class ObjectToDBObject {
 
-    private static OrderToDBObject instance;
+    private static ObjectToDBObject instance;
 
     //private constructor
-    private OrderToDBObject(){
+    private ObjectToDBObject(){
 
     }
 
-    public static OrderToDBObject getInstance(){
+    public static ObjectToDBObject getInstance(){
         return instance;
     }
 

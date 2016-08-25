@@ -11,7 +11,7 @@ import com.mongodb.BasicDBObject;
 //Class for changing User & Order object to BasicDocument for Mongo database
 public class ObjectToDBObject {
 
-    private static ObjectToDBObject instance;
+    private static ObjectToDBObject instance = new ObjectToDBObject();
 
     //private constructor
     private ObjectToDBObject(){

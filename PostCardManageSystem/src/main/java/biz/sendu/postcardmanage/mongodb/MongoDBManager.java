@@ -44,8 +44,9 @@ public class MongoDBManager {
         int port = Integer.parseInt(dbProps.getProperty("PORT"));
 */
         try {
-            mongoClient = new MongoClient(new ServerAddress("104.41.183.65", 27017));
+            mongoClient = new MongoClient(new ServerAddress("sendukor7833.cloudapp.net", 27017));
         } catch (UnknownHostException e) {
+            e.printStackTrace();
         }
 
         userDB = mongoClient.getDB("users");

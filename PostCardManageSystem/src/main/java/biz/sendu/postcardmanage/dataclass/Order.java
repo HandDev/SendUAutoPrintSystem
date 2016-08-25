@@ -50,4 +50,9 @@ public class Order {
     public void setImageDIR(String imageDIR) {
         this.imageDIR = imageDIR;
     }
+
+    @Override
+    public String toString() {
+        return "Order [uuid=" + userUUID + "," + "idx=" + idx + "," + "orderData=" + orderDate +"]";
+    }
 }

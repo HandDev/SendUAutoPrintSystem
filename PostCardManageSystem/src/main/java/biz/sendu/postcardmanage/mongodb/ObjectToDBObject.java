@@ -27,6 +27,7 @@ public class ObjectToDBObject {
                 append("idx", input.getIdx()).
                 append("orderDate", input.getOrderDate()).
                 append("imgDir", input.getImageDIR()).
+                append("text", input.getText()).
                 append("status", input.getStatus());
         return doc;
     }

@@ -26,10 +26,11 @@ public class CardImageUpload extends HttpServlet{
         String checkSumInput = request.getParameter("checksum");
 
         fileDir.append(useruuid);
-        fileDir.append(".png");
+        //fileDir.append("test");
+        fileDir.append(".jpg");
 
         InputStream in = request.getPart("userfile").getInputStream();
-        OutputStream out = new FileOutputStream(fileDir.toString());
+        OutputStream out = new FileOutputStream(new File(fileDir.toString()));
 
         copy(in, out); //The function is below
         out.flush();

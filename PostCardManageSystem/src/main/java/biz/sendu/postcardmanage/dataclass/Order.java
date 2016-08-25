@@ -8,8 +8,17 @@ public class Order {
     private String userUUID;
     private String idx;
     private String orderDate;
-    private int status;
     private String imageDIR;
+    private String text;
+    private int status;
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 
     public String getUserUUID() {
         return userUUID;

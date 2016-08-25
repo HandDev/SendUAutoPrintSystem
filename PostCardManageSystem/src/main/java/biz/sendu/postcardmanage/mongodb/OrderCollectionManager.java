@@ -12,7 +12,7 @@ import java.net.UnknownHostException;
  */
 //Singleton Pattern
 public class OrderCollectionManager {
-    private static OrderCollectionManager instance;
+    private static OrderCollectionManager instance = new OrderCollectionManager();
     public static OrderCollectionManager getInstance(){
         return instance;
     }
@@ -27,6 +27,12 @@ public class OrderCollectionManager {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
+    }
+
+    public void receiptOrder(BasicDBObject doc){
+        DBCollection orderTable = db.getCollection("order");
+
+        orderTable.insert(doc);
     }
 
     public String searchOrderByUserUUID(String userUUID){
@@ -44,5 +50,16 @@ public class OrderCollectionManager {
         }
 
         return stringBuffer.toString();
+    }
+
+    public void changeOrderStatusByOrderUUID(String orderUUID){
+
+        BasicDBObject whereQuery = new BasicDBObject().append("orderuuid", orderUUID);
+
+        DBCollection orderTable = db.getCollection("order");
+
+        DBCursor dbCursor = orderTable.find(whereQuery);
+
+
     }
 }

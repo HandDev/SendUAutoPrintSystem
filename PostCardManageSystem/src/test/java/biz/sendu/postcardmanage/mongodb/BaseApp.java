@@ -36,6 +36,11 @@ public class BaseApp {
         while(dbCursor.hasNext()) {
             System.out.println(dbCursor.next());
         }
+
+        OrderCollectionManager orderCollectionManager = OrderCollectionManager.getInstance();
+
+        System.out.println(orderCollectionManager.searchOrderByUserUUID("1234"));
+
     }
 
 }

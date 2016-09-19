@@ -19,6 +19,7 @@ public class CardImageUpload extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         System.out.println("CardImageUpload doPost");
         StringBuffer fileDir = new StringBuffer("root/sendu/postcard/");
 

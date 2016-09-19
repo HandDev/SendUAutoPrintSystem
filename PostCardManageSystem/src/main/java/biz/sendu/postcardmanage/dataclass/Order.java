@@ -6,7 +6,7 @@ package biz.sendu.postcardmanage.dataclass;
 public class Order {
 
     private String userUUID;
-    private String idx;
+    private String orderUUID;
     private String orderDate;
     private String imageDIR;
     private String text;
@@ -28,12 +28,12 @@ public class Order {
         this.userUUID = userUUID;
     }
 
-    public String getIdx() {
-        return idx;
+    public String getOrderUUID() {
+        return orderUUID;
     }
 
-    public void setIdx(String idx) {
-        this.idx = idx;
+    public void setOrderUUID(String idx) {
+        this.orderUUID = idx;
     }
 
     public String getOrderDate() {
@@ -62,6 +62,6 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order [uuid=" + userUUID + "," + "idx=" + idx + "," + "orderData=" + orderDate +"]";
+        return "Order [uuid=" + userUUID + "," + "idx=" + orderUUID + "," + "orderData=" + orderDate +"]";
     }
 }

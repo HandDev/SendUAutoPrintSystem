@@ -24,9 +24,9 @@ public class ObjectToDBObject {
 
     public BasicDBObject orderToDBObject(Order input){
         BasicDBObject doc = new BasicDBObject("userUUID",input.getUserUUID()).
-                append("idx", input.getIdx()).
+                append("orderuuid", input.getOrderUUID()).
                 append("orderDate", input.getOrderDate()).
-                append("imgDir", input.getImageDIR()).
+                //append("imgDir", input.getImageDIR()).
                 append("text", input.getText()).
                 append("status", input.getStatus());
         return doc;

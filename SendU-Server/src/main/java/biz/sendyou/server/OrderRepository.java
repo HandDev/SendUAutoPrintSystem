@@ -1,5 +1,6 @@
 package biz.sendyou.server;
 
+import biz.sendyou.server.order.CardOrder;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

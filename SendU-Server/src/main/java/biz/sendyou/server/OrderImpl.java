@@ -1,5 +1,6 @@
 package biz.sendyou.server;
 
+import biz.sendyou.server.order.CardOrder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

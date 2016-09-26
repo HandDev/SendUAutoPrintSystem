@@ -23,6 +23,7 @@ public class OrderController {
         System.out.println("orderUUID : " + orderUUID);
         System.out.println("userUUID : " + userUUID);
 
+        newCardOrder.setOrderStatus(CardOrder.OrderStatus.Ordered);
         newCardOrder.setOrderUUID(orderUUID);
         newCardOrder.setUserUUID(userUUID);
 

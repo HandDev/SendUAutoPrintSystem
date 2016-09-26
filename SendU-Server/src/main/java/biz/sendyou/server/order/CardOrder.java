@@ -23,6 +23,14 @@ public class CardOrder {
     private String numAddress;
     private String text;
     private String image;
+    private OrderStatus orderStatus;
+
+    public static enum OrderStatus{
+        Ordered,
+        Making,
+        Deliverying,
+        Completed
+    }
 
     public void setOrderUUID(String orderUUID) {
         this.orderUUID = orderUUID;
@@ -94,6 +102,14 @@ public class CardOrder {
 
     public void setReceiverPhone(String receiverPhone) {
         this.receiverPhone = receiverPhone;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
     }
 }
 

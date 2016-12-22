@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="a7a1191a-d280-4664-9b59-309e359aae62" name="SendUAWSEC2" url="http://ec2-52-78-159-163.ap-northeast-2.compute.amazonaws.com">
-        <fileTransfer host="ec2-52-78-159-163.ap-northeast-2.compute.amazonaws.com" port="22" privateKey="$PROJECT_DIR$/../../../../SendU.pem" rootFolder="/home/ubuntu" accessType="SFTP" keyPair="true">
+      <webServer id="a7a1191a-d280-4664-9b59-309e359aae62" name="SendUAWSEC2" url="http://sendu.kr">
+        <fileTransfer host="sendu.kr" port="22" privateKey="$PROJECT_DIR$/../../../../SendU.pem" rootFolder="/home/ubuntu" accessType="SFTP" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

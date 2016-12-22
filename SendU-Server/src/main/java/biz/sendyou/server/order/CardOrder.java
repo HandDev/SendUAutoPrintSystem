@@ -24,12 +24,20 @@ public class CardOrder {
     private String text;
     private String image;
     private OrderStatus orderStatus;
+    private int templateID;
 
     public static enum OrderStatus{
         Ordered,
-        Making,
         Deliverying,
         Completed
+    }
+
+    public int getTemplateID() {
+        return templateID;
+    }
+
+    public void setTemplateID(int templateID) {
+        this.templateID = templateID;
     }
 
     public void setOrderUUID(String orderUUID) {

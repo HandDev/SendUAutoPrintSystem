@@ -11,5 +11,5 @@ import java.util.List;
 @Service
 public interface OrderService {
     void addOrder(CardOrder cardOrder);
-    List<CardOrder> searchOrdersByUser(String userUUID);
+    //List<CardOrder> searchOrdersByUser(String userUUID);
 }

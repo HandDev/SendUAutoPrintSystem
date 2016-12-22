@@ -4,7 +4,8 @@ import biz.sendyou.server.order.CardOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by parkjaesung on 2016. 9. 19..
@@ -12,6 +13,9 @@ import javax.websocket.server.PathParam;
 
 @RestController
 public class OrderController {
+
+    @Resource
+    OrderRepository orderRepository;
 
     @Autowired
     OrderService orderService;
@@ -32,5 +36,12 @@ public class OrderController {
         orderService.addOrder(newCardOrder);
 
         return newCardOrder;
+    }
+
+    @RequestMapping(value = "/{email}/orders")
+    public List<CardOrder> searchOrdersByUser(@PathVariable("email") String email){
+        System.out.println("email : " + email);
+
+        return orderRepository.searchOrdersByUser(email);
     }
 }

@@ -4,7 +4,6 @@ import biz.sendyou.server.order.CardOrder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * Created by parkjaesung on 2016. 9. 19..
@@ -20,9 +19,4 @@ public class OrderImpl implements OrderService {
         orderRepository.save(cardOrder);
     }
 
-    @Override
-    public List<CardOrder> searchOrdersByUser(String userUUID) {
-        //TODO Create Custom Query
-        return null;
-    }
 }
